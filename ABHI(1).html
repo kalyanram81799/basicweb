@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-image: url('your-image-path.jpg');
+            background-size: cover;
+            color: #171616;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            margin-top: 180px;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1100px;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 150px;
+            opacity: 0;
+            animation: slideIn 1s forwards;
+        }
+        .content-container h1{
+            font-family: 'Times New Roman', Times, serif;
+            /* margin-left: 167px; */
+            font-size: 34px;
+            margin-right: 23px;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+            width: 55%;
+            justify-content: right;
+            padding-right: 20px;
+            margin-left: 23px;
+        }
+
+        .hospital-info {
+            margin-top: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(22, 136, 243);
+            border-style: dashed;
+        }
+
+        ul {
+            border-style: dashed;
+            list-style-type: none;
+        }
+
+        .content-container img {
+            width: 80%; 
+            height: auto;
+            border-radius: 10px;
+            align-self: center;
+        }
+
+        .registration-form {
+            background: rgb(99, 236, 229);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgb(255, 0, 0);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            margin-top: 113px;
+            backdrop-filter: blur(10px);
+        }
+
+        .registration-form h1 {
+            font-size: 27px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #f70404;
+        }
+
+        .registration-form p {
+            font-size: 18px;
+            text-align: left;
+            margin: 10px 0 5px;
+            color: #0a0a0a;
+        }
+
+        .registration-form input {
+            font-size: 16px;
+            padding: 12px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 10px;
+            background: rgba(253, 253, 252, 0.8);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .registration-form input:hover {
+            border-color: #f70404;
+            box-shadow: 0 0 8px rgba(247, 4, 4, 0.8);
+        }
+
+        .registration-form button {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background-color: #f3edec;
+            color: #0a0a0a;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .registration-form button:hover {
+            background-color: #ff9800;
+        }
+
+        span {
+            color: red;
+        }
+
+        table {
+            padding-left: 50px;
+            word-spacing: 10px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .content-container {
+            animation: slideIn 1s ease-out forwards;
+        }
+        body h1{
+            top:0%;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="content-container">
+        
+        <div class="left-section">
+            <marquee behavior="alternative" direction=""></mark><H1>ABOUT HOSPITAL</H1><BR><BR></BR></BR></marquee>
+            <img src="h2.jpeg" alt="Hospital Image">
+            <div class="hospital-info">
+                <h2>ABHI MULTISPECALITY HOSPITALS</h2><br>
+                <ul type="*">
+                    <li><span>~></span>Advanced cardiac care with state-of-the-art technology.</li><br>
+                    <li><span>~></span>Experienced team of cardiologists and cardiac surgeons.</li><br>
+                    <li><span>~></span>24/7 emergency heart care services.</li><br>
+                    <li><span>~></span>International quality and safety standards.</li><br>
+                    <li><span>~></span>Advanced cardiac care with state-of-the-art technology.</li><br>
+                    <li><span>~></span>Experienced team of cardiologists and cardiac surgeons.</li><br>
+                    <li><span>~></span>24/7 emergency heart care services.</li><br>
+                    <li><span>~></span>International quality and safety standards.</li><br>
+                    <li><span>~></span>Advanced cardiac care with state-of-the-art technology.</li><br>
+                    <li><span>~></span>Experienced team of cardiologists and cardiac surgeons.</li><br>
+                    <li><span>~></span>24/7 emergency heart care services.</li><br>
+                    <li><span>~></span>International quality and safety standards.</li><br>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="registration-form">
+            
+            <h1>Registration Form</h1>
+            <form action="#" method="post">
+                <p>PATIENT NAME:</p>
+                <input type="text" name="fullname" placeholder="Enter Full Name" required>
+                <p>PHONE NO:</p>
+                <input type="number" name="phone" placeholder="Enter mobile number" required>
+                <p>E-MAIL:</p>
+                <input type="email" name="email" placeholder="example@domain.com" required>
+                <p>SEX:</p>
+                <table>
+                <tr><td><input type="radio" name="Gender" value="Male" required>MALE</td><br>
+                    <td><input type="radio" name="Gender" value="Female" required>FEMALE</td></tr>
+                    <td><input type="radio" name="Gender" value="others" required>OTHERS</td></table>
+                    <p>YOUR PERMANENT ADDRESS:</p>
+                <input type="text" placeholder="enter your address">   
+                <p>AGE:</p>
+                <input type="number" placeholder="enter your age">
+                <p>SELECT DATE:</p>
+                <input type="date">
+                <p>SELECT SLOT:</p>
+                <input type="time" placeholder="enter your age">
+
+                    
+                <button type="button" onclick="window.location.href='sub.html';">BOOK NOW</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 90px;
+            background-color:beige;
+            color: #343a40;
+        }
+nav {
+            background-color: #1688f3;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #e40606;
+            background-color: #6c757d;
+        }
+
+        p {
+            text-align: center;
+            margin: 20px auto;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        .emergency-button-container {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .emergency-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            animation: pulse 1.5s infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            border: 2px solid #c0392b;
+        }
+
+        .emergency-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        .emergency-button i {
+            margin-right: 12px;
+            font-size: 1.1em;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .emergency-message {
+            position: fixed;
+            bottom: 80px;
+            width: 100%;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.95em;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
+        .emergency-message strong {
+            color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #dee2e6;
+            width: 90%;
+            max-width: 450px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-button {
+            color: #6c757d;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: #343a40;
+        }
+
+        .modal-content h2 {
+            color: #dc3545;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .modal-content p {
+            font-size: 1.05em;
+            line-height: 1.5;
+            color: #495057;
+            margin-bottom: 25px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .modal-buttons .button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+
+        .modal-buttons .confirm {
+            background-color: #28a745;
+            color: white;
+            box-shadow: 0 4px 8px rgba(40, 167, 69, 0.2);
+        }
+
+        .modal-buttons .confirm:hover {
+            background-color: #218838;
+            transform: translateY(-1px);
+        }
+
+        .modal-buttons .cancel {
+            background-color: #6c757d;
+            color: white;
+            box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
+        }
+
+        .modal-buttons .cancel:hover {
+            background-color: #5a6268;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <h1 >Welcome to life consult services</h1>
+    <p>We're here to help you navigate important health information. For **life-threatening emergencies**, please use our dedicated button below.</p>
+    <p>For general health inquiries or to connect with our **Life Consult** team, please explore the other sections of our website or reach out through our contact page.</p>
+
+    <div class="emergency-message">
+        For immediate help, tap the button below. For non-urgent guidance, contact our **Life Consult** team.
+    </div>
+
+    <div class="emergency-button-container">
+        <a href="javascript:void(0);" id="openEmergencyModal" class="emergency-button" aria-label="Open Emergency Call Dialog">
+            <i class="fas fa-phone-alt"></i> EMERGENCY HELP
+        </a>
+    </div>
+
+    <div id="emergencyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" role="button" aria-label="Close dialog">&times;</span>
+            <h2>Call Emergency Services?</h2>
+            <p>Clicking "Call Now" will connect you directly to your local emergency services (e.g., **108 in India**). This action is for **genuine life-threatening emergencies only**.</p>
+            <p>If you need general medical advice or non-urgent assistance, please explore our website or contact our **Life Consult** team instead.</p>
+            <div class="modal-buttons">
+                <a href="tel:+91108" class="confirm button" id="confirmEmergencyCall">Call Now (108)</a>
+                <button class="cancel button" id="cancelEmergencyCall">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openModalButton = document.getElementById('openEmergencyModal');
+        const emergencyModal = document.getElementById('emergencyModal');
+        const closeModalButton = document.querySelector('#emergencyModal .close-button');
+        const cancelCallButton = document.getElementById('cancelEmergencyCall');
+
+        openModalButton.addEventListener('click', function() {
+            emergencyModal.style.display = 'flex';
+        });
+
+        closeModalButton.addEventListener('click', function() {
+            emergencyModal.style.display = 'none';
+        });
+
+        cancelCallButton.addEventListener('click', function() {
+            emergencyModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === emergencyModal) {
+                emergencyModal.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && emergencyModal.style.display === 'flex') {
+                emergencyModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

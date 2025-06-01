@@ -1,0 +1,310 @@
+<html>
+<head>
+    <style>
+        body{
+          margin-top: 105px;
+        }
+        nav{
+          display: flex;
+          background-color: #333;
+          justify-content: space-between;
+          position: fixed;
+          top: 0; 
+          width: 100%; 
+          height: 73px;
+          z-index: 1000;
+          padding: 10px 0;
+        }
+        nav >h1{
+          margin-left: 50px;
+          color:white;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          font-weight: 500;
+          font-size: 30px;
+        }
+        nav >ul{
+          display: flex;
+          margin-right: 30px;
+        }
+        nav >ul >a{
+          padding: 20px;
+          list-style: none;
+          color:white;
+          font-weight: 700;
+          text-decoration: none;
+          transition: transform 0.4s ease-in-out;
+          cursor: pointer;
+        }
+        nav >ul >a:hover{
+          transform: scale(1.1);
+          background:#fba002;
+          size: 1PX;
+          border-radius: 15px;
+          color: black;
+        }
+        .ftr{
+          padding:20px;
+          word-spacing:3px;
+          background-color: #333;
+          text-align: center;
+          color:white;
+        }
+        .ftr a{
+          color: orange;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+        div{
+          display: flex;
+          justify-content: center;
+          margin-top: 100px;
+        }
+        div img{
+          margin-top: 13px;
+          width: 70%;
+          height: 440px;
+        }
+        .ik{
+          text-align: right;
+          display: flex;
+          gap: 55px;
+          margin-top: 18px;
+        }
+        .ik button{
+          font-weight: 700;
+          font-size: 18px;
+          font-family: "Helios Pro", sans-serif;
+          padding: 15px 30px;
+          background-color:#db732d;
+          color:#ffffff;
+          transition: background-color 0.3s ease;
+          cursor: pointer;
+          margin-bottom: 45px;
+        }
+        .ik button:hover{
+          background-color:#fbf7ba;
+          border-radius: 15px;
+          transform: scale(1.04);
+          color: red;
+          font-weight: 900;
+          font-size: 18px;
+          padding: 15px 30px;
+        }
+        .vd{
+          position: relative;
+          width: 100%;
+          height: 90vh; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          margin-top: 50px;
+        }
+        @keyframes fadeZoom {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        video {
+          width: 70%; 
+          max-height: 80%; 
+          border-radius: 25px;
+          z-index: 1; 
+          animation: fadeZoom 1.9s ease-in-out;
+        }
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          color: white;
+          z-index: 2;
+          width: 100%;
+        }
+        .content h1 {
+          font-size: 50px;
+          font-weight: bold;
+        }
+        .content p {
+          font-size: 20px;
+        }
+        .contact-info {
+          display: none;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 174px;
+          height: 23px;
+          background-color: beige;
+          color: #333;
+          padding: 17px;
+          border-radius: 15px;
+          font-size: 14px;
+        }
+        nav > ul > a:hover .contact-info {
+          display: block;
+        }
+  
+        @media (max-width: 1024px) {
+          nav > h1 {
+            font-size: 25px;
+          }
+          nav > ul {
+            margin-right: 10px;
+          }
+          nav > ul > a {
+            padding: 15px;
+            font-size: 16px;
+          }
+          div {
+            flex-direction: column;
+            justify-content: center;
+          }
+          div img {
+            width: 90%;
+            height: auto;
+          }
+          .ik {
+            flex-direction: column;
+            align-items: center;
+          }
+          .ik button {
+            margin-bottom: 20px;
+          }
+          video {
+            width: 100%;
+          }
+          .content h1 {
+            font-size: 35px;
+          }
+        }
+  
+        @media (max-width: 768px) {
+          nav > h1 {
+            font-size: 22px;
+          }
+          nav > ul {
+            display: block;
+            text-align: center;
+          }
+          nav > ul > a {
+            padding: 10px;
+            font-size: 14px;
+          }
+          .ftr {
+            font-size: 14px;
+            padding: 15px;
+          }
+          div {
+            margin-top: 50px;
+          }
+          div img {
+            width: 100%;
+            height: auto;
+          }
+          .ik {
+            flex-direction: column;
+            gap: 20px;
+          }
+          .ik button {
+            font-size: 16px;
+            padding: 12px 25px;
+          }
+          video {
+            width: 100%;
+            max-height: 100%;
+          }
+          .content h1 {
+            font-size: 28px;
+          }
+        }
+  
+        @media (max-width: 480px) {
+          nav > h1 {
+            font-size: 19px;
+          }
+          nav > ul {
+            display: block;
+            text-align: center;
+          }
+          nav > ul > a {
+            padding: 8px;
+            font-size: 12px;
+          }
+          .ftr {
+            font-size: 12px;
+            padding: 10px;
+          }
+          div {
+            margin-top: 30px;
+          }
+          div img {
+            width: 100%;
+            height: auto;
+          }
+          .ik button {
+            font-size: 14px;
+            padding: 10px 20px;
+          }
+          .content h1 {
+            font-size: 23px;
+          }
+        }
+      </style>
+    <script src="bc1.js"></script>
+</head>
+<body>
+    
+
+        <nav>
+            <h1>LIFE CONSULT</h1>
+        <ul>
+            <a href="main.html#"><li>HOME</li></a>
+            <a href="menu.html"><li>MENU</li></a>
+            <a href="ab.html"><li>ABOUT</li></a>
+            <a href="#">
+              <li>CONTACT
+                  <span class="contact-info">
+                      Phone: +123 456 7890 <br>
+                      Emergency: +098 765 4321
+                  </span>
+              </li>
+          </a>
+
+            <a href="help.html"><li>HELP</li></a>
+        </ul>
+    </nav>
+    <div class="vd">
+      <video autoplay muted loop>
+        <source src="0302.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+    <h1>Welcome to Life Consult</h1>
+    
+</div>
+
+    </div>
+    <div class="ik">
+        <button onclick="book()">BOOK APPOINTEMENT</button>
+        <button onclick="bookk()">EMERGENCY</button>
+        <button onclick="booke()">MEDICINE DELIVERY</button>
+    </div>
+    <footer class="ftr">
+    
+        <p>HEALTH CONSULT ONLINE</p>
+         <p> BOOK YOUR APPOINTMENT ONLINE</p>
+        <p>&copy; 2024 Health Guide. All Rights Reserved.</p>
+        <a href="#">TWITTER</a>|
+        <a href="#">INSTAGRAM</a>|
+        <a href="#">FACEBOK</a>
+          
+    </footer>
+</body>
+</html>

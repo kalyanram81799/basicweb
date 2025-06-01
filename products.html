@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Medicines - MediQuick</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Medicines</a></li>
+            <li><a href="#" class="nav-categories">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search medicines..." id="search-input">
+            <button class="search-btn" id="search-btn"></button>
+          </div>
+          
+          <div class="header-buttons">
+            <a href="account.html" class="btn-account" id="account-btn"></a>
+            <a href="cart.html" class="btn-cart" id="cart-btn">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+          
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">MediQuick</div>
+      <button class="mobile-menu-close" id="mobile-menu-close">×</button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Medicines</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Prescriptions</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Browse Medicines</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">›</span>
+          <span class="current">Medicines</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="products-section">
+      <div class="container">
+        <div class="products-layout">
+          <aside class="filter-sidebar">
+            <div class="filter-header">
+              <h2>Filters</h2>
+              <button class="filter-close-mobile" id="filter-close">×</button>
+              <button class="clear-all" id="clear-filters">Clear All</button>
+            </div>
+            
+            <div class="filter-section">
+              <h3 class="filter-title">Categories</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="heart">
+                  <span class="checkbox-custom"></span>
+                  <span>Heart Health</span>
+                  <span class="count">(24)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="diabetes">
+                  <span class="checkbox-custom"></span>
+                  <span>Diabetes Care</span>
+                  <span class="count">(18)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="pain">
+                  <span class="checkbox-custom"></span>
+                  <span>Pain Relief</span>
+                  <span class="count">(32)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="vitamins">
+                  <span class="checkbox-custom"></span>
+                  <span>Vitamins & Supplements</span>
+                  <span class="count">(45)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="skin">
+                  <span class="checkbox-custom"></span>
+                  <span>Skin Care</span>
+                  <span class="count">(29)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="cold">
+                  <span class="checkbox-custom"></span>
+                  <span>Cold & Flu</span>
+                  <span class="count">(21)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h3 class="filter-title">Price Range</h3>
+              <div class="price-slider">
+                <div class="price-range">
+                  <div class="price-slider-track" id="price-slider-track">
+                    <div class="price-slider-fill" id="price-slider-fill"></div>
+                    <div class="price-slider-handle" id="price-min-handle"></div>
+                    <div class="price-slider-handle" id="price-max-handle"></div>
+                  </div>
+                </div>
+                <div class="price-inputs">
+                  <div class="price-input">
+                    <span class="price-currency">$</span>
+                    <input type="number" id="price-min" value="0" min="0" max="100">
+                  </div>
+                  <span class="price-separator">-</span>
+                  <div class="price-input">
+                    <span class="price-currency">$</span>
+                    <input type="number" id="price-max" value="100" min="0" max="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h3 class="filter-title">Brand</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" name="brand" value="pharmaplus">
+                  <span class="checkbox-custom"></span>
+                  <span>PharmaPlus</span>
+                  <span class="count">(42)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="brand" value="medcure">
+                  <span class="checkbox-custom"></span>
+                  <span>MedCure</span>
+                  <span class="count">(36)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="brand" value="lifewell">
+                  <span class="checkbox-custom"></span>
+                  <span>LifeWell</span>
+                  <span class="count">(29)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="brand" value="healthfirst">
+                  <span class="checkbox-custom"></span>
+                  <span>HealthFirst</span>
+                  <span class="count">(24)</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="brand" value="curevital">
+                  <span class="checkbox-custom"></span>
+                  <span>CureVital</span>
+                  <span class="count">(18)</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h3 class="filter-title">Prescription Required</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="radio" name="prescription" value="yes">
+                  <span class="radio-custom"></span>
+                  <span>Yes</span>
+                </label>
+                <label class="filter-option">
+                  <input type="radio" name="prescription" value="no">
+                  <span class="radio-custom"></span>
+                  <span>No</span>
+                </label>
+                <label class="filter-option">
+                  <input type="radio" name="prescription" value="all" checked>
+                  <span class="radio-custom"></span>
+                  <span>Show All</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-section">
+              <h3 class="filter-title">Rating</h3>
+              <div class="filter-options">
+                <label class="filter-option rating-option">
+                  <input type="radio" name="rating" value="4">
+                  <span class="radio-custom"></span>
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span>& Up</span>
+                </label>
+                <label class="filter-option rating-option">
+                  <input type="radio" name="rating" value="3">
+                  <span class="radio-custom"></span>
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span>& Up</span>
+                </label>
+                <label class="filter-option rating-option">
+                  <input type="radio" name="rating" value="2">
+                  <span class="radio-custom"></span>
+                  <div class="stars">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                  </div>
+                  <span>& Up</span>
+                </label>
+              </div>
+            </div>
+            
+            <button class="btn btn-primary filter-apply-btn" id="apply-filters">Apply Filters</button>
+          </aside>
+          
+          <div class="products-content">
+            <div class="products-header">
+              <button class="filter-toggle" id="filter-toggle">
+                <span class="filter-icon"></span>
+                <span>Filters</span>
+              </button>
+              
+              <div class="products-result-count">
+                <span id="product-count">168</span> products found
+              </div>
+              
+              <div class="products-sort">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by" class="sort-select">
+                  <option value="popular">Popularity</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                  <option value="newest">Newest First</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+              <!-- Products will be loaded via JavaScript -->
+            </div>
+            
+            <div class="pagination">
+              <button class="pagination-prev" id="pagination-prev" disabled>Previous</button>
+              <div class="pagination-numbers" id="pagination-numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <span class="pagination-dots">...</span>
+                <a href="#">12</a>
+              </div>
+              <button class="pagination-next" id="pagination-next">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </div>
+          <p class="footer-tagline">Your trusted medicine delivery service</p>
+          <div class="social-links">
+            <a href="#" class="social-link social-facebook"></a>
+            <a href="#" class="social-link social-twitter"></a>
+            <a href="#" class="social-link social-instagram"></a>
+            <a href="#" class="social-link social-linkedin"></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Medicines</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li class="contact-phone">1-800-MEDIQUICK</li>
+            <li class="contact-email">support@mediquick.com</li>
+            <li class="contact-hours">
+              <span>Hours: 8AM - 10PM</span>
+              <span>Monday to Sunday</span>
+            </li>
+          </ul>
+          <div class="newsletter">
+            <h3>Subscribe to Newsletter</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2025 MediQuick. All rights reserved.</p>
+        </div>
+        <div class="payment-methods">
+          <span class="payment payment-visa"></span>
+          <span class="payment payment-mastercard"></span>
+          <span class="payment payment-amex"></span>
+          <span class="payment payment-paypal"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="back-to-top"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <title></title>
+            <style>
+                .img1{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:20px;
+                }
+                .i1{
+                    margin-top: 23px;
+                    display:flex;
+                    justify-content: center;
+                    padding: 50px;
+                    overflow: hidden;
+                    width: 70%;
+                    
+                    box-shadow: 0 4px 8px rgb(66, 39, 64); 
+                    transition: transform 0.3s ease-in-out;
+                    cursor: pointer;
+                }
+                .i1:hover{
+                      transform: scale(1.03);
+                }
+                .i1 img{
+                    width: 50%;
+                    height:190px;
+                    object-fit: cover; 
+                    margin-left: 50px;
+                }
+                .po{
+                    display: flex;
+                    justify-content: center;  
+                    align-items: center;
+                    width:100%;
+                    margin-left: 13px;
+                }
+                .po p{
+                    margin-right: 10px;
+                    font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+                }
+                .bo{
+                    display:flex;
+                    align-items: center;
+                }
+                .bo button{
+                    transition: transform 0.2s ease-in-out;
+              font-weight: 600;
+              font-size: 12px;
+              background-color: #ff6a00;
+              border-radius: 15px;
+              border:none;
+              color:rgb(10, 9, 9);
+              font-family: Georgia, 'Times New Roman', Times, serif;
+              padding:38px 28px;
+              transition: transform 0.3s ease-in-out;
+              cursor: pointer;
+              size: 54%;
+              margin-left: 13PX;
+                }
+                .bo button:hover{
+                    transform: scale(1.08);
+                    background-color:rgb(11, 67, 179);
+                    color:aliceblue;
+                }
+                nav{
+            display: flex;
+            background-color: #333;
+            justify-content: space-between;
+            position: fixed;
+            top: 0; 
+            width: 100%; 
+            height: 63px;
+            z-index: 1000;
+            padding: 10px 0;
+          }
+          
+          nav >h1{
+            margin-left: 50px;
+            color:white;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 30px;
+           
+          }
+          nav >ul{
+            display: flex;
+            margin-right: 30px;
+
+          }
+          nav >ul >a{
+            padding: 20px;
+            list-style: none;
+            color:white;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+          }
+          nav >ul >a:hover{
+            transform: scale(1.1);
+            background: linear-gradient(to right, brown, rgb(109, 22, 22));
+            size: 1PX;
+            border-radius: 15px;
+            color: gold;
+          }
+
+          h2{
+            background-color:#333;
+            color: aliceblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 60%;
+           text-align: center;
+           margin-left: 295px;
+          }
+           .ftr{
+            margin-top: 30px;
+            padding:20px;
+            word-spacing:3px;
+            background-color: #333;
+            text-align: center;
+            color:white;
+          }
+           .ftr a{
+            color: orange;
+            text-decoration: none;
+            margin: 0 10px;
+           }
+            </style>
+    </head>
+    <body>
+        <nav>
+            <h1>LIFE CONSULT</h1>
+        <ul>
+            <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/Website/main.html#"><li>HOME</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\menu.html"><li>MENU</li></a>
+            <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/Website/ab.html"><li>ABOUT</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\cont.html"><li>CONTACT</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\help.html"><li>HELP</li></a>
+        </ul>
+    </nav>
+    <br>
+    <br><br><br><br>
+         <h2 >CHOOSE  A  HOSPITAL  TO   BOOK   APPOINTEMENT</h2>
+</br>
+        <div class="img1">
+            <div class="i1">
+                <img src="RIMS.JPEG" alt="gdhs">
+                <div class="po">
+                   <p>RIMS MULTISPECALITY HOSPITAL</p>
+                   <div class="bo">
+                    <button onclick="ks()">
+                     CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+       
+            <div class="i1">
+                <img src="AMRUT.jpg" alt="gdhs">
+                <div class="po">
+                   <p>KIMS MULTISPECALITY HOSPITAL</p>
+                   <div class="bo">
+                    <button>
+                     CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+          
+            <div class="i1">
+                <img src="PRAKASAM.JPEG" alt="gdhs">
+                <div class="po">
+                   <p>PRAKASAM HEART HOSPITAL</p>
+                   <div class="bo">
+                    <button >
+                  CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+           
+            <div class="i1">
+                <img src="RAINBOW.jpg" alt="gdhs">
+                <div class="po">
+                   <p>RAINBOW HEART AND LUNGS HOSPITAL</p>
+                   <div class="bo">
+                    <button>
+                 CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+           
+            <div class="i1">
+                <img src="SANGA.jpg" alt="gdhs">
+                <div class="po">
+                   <p>SANGAMITHRA MULTISPECALITY HOSPITAL</p>
+                   <div class="bo">
+                    <button>
+                 CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+           
+            <div class="i1">
+                <img src="VEN.jpg" alt="gdhs">
+                <div class="po">
+                   <p>VENKATARAMANA HEART SPECALITY HOSPITAL</p>
+                   <div class="bo">
+                    <button>
+                 CONFORM
+                    </button>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <footer class="ftr">
+    
+            <p>HEALTH CONSULT ONLINE</p>
+             <p> BOOK YOUR APPOINTMENT ONLINE</p>
+            <p>&copy; 2024 Health Guide. All Rights Reserved.</p>
+            <a href="#">TWITTER</a>|
+            <a href="#">INSTAGRAM</a>|
+            <a href="#">FACEBOK</a>
+              
+        </footer>
+    </body>
+</html>

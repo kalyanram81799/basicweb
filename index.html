@@ -1,0 +1,233 @@
+<html>
+<head>
+    <style>
+        /* Main container for video and content */
+        .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 50px; /* Add space between the video and the top of the page */
+}
+
+
+        /* Video properties */
+        video {
+            width: 60%; /* Adjust width as needed */
+            max-height: 90%; /* Make sure the video doesn't exceed container */
+            border-radius: 15px;
+            z-index: 1; /* Ensure the video stays in the background */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Content positioned over the video */
+        .content {
+            position: absolute;
+            top: 20%;
+            text-align: center;
+            color: white;
+            z-index: 2; /* Ensure the content stays on top */
+        }
+
+        .content h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .content p {
+            font-size: 20px;
+        }
+
+        /* Basic Navigation Bar */
+        nav {
+            display: flex;
+            background-color: #333;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 73px;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        nav > h1 {
+            margin-left: 50px;
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 30px;
+        }
+
+        nav > ul {
+            display: flex;
+            margin-right: 30px;
+        }
+
+        nav > ul > a {
+            padding: 20px;
+            list-style: none;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        nav > ul > a:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, brown, rgb(109, 22, 22));
+            size: 1PX;
+            border-radius: 15px;
+            color: gold;
+        }
+
+        .ftr {
+            padding: 20px;
+            word-spacing: 3px;
+            background-color: #333;
+            text-align: center;
+            color: white;
+        }
+
+        .ftr a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Button Section */
+        /* Button Section */
+.ik {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px; /* Adjust this value to move buttons up */
+    margin-bottom: 50px; /* Add space between the buttons and the footer */
+    animation: bounceIn 1s ease-out;
+}
+
+
+        .ik button {
+            font-weight: 700;
+            font-size: 18px;
+            padding: 15px 30px;
+            background-color: #66ff00;
+            color: rgb(36, 35, 35);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        .ik button:hover {
+            background-color: brown;
+            transform: scale(1.04);
+            color: aliceblue;
+            border-radius: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer Section */
+        footer .ftr {
+            padding: 20px;
+            word-spacing: 3px;
+            background-color: #333;
+            text-align: center;
+            color: white;
+        }
+
+        footer .ftr a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    </style>
+</head>
+<body background="C:\Users\rohit\OneDrive\Pictures\Screenshots\Screenshot (25).png">
+
+    <nav>
+        <h1>LIFE CONSULT</h1>
+        <ul>
+            <a href="#"><li>HOME</li></a>
+            <a href="#"><li>MENU</li></a>
+            <a href="#"><li>DESK</li></a>
+            <a href="#"><li>ABOUT</li></a>
+            <a href="#"><li>CONTACT</li></a>
+            <a href="#"><li>HELP</li></a>
+        </ul>
+    </nav>
+
+    <!-- Video Section -->
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="C:\Users\rohit\OneDrive\Desktop\abhi\0302.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content Overlay -->
+        <div class="content">
+            <h1>Welcome to Life Consult</h1>
+            <p>Book your health consultation now!</p>
+        </div>
+    </div>
+
+    <!-- Button Section -->
+    <div class="ik">
+        <button onclick="book()">BOOK APPOINTMENT</button>
+        <a href="md.html"><button onclick="book()">MEDICINES DELIVERY</button></a>
+        <button onclick="book()">EMERGENCY</button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="ftr">
+        <p>HEALTH CONSULT ONLINE</p>
+        <p>BOOK YOUR APPOINTMENT ONLINE</p>
+        <p>&copy; 2024 Health Guide. All Rights Reserved.</p>
+        <a href="#">TWITTER</a>|
+        <a href="#">INSTAGRAM</a>|
+        <a href="#">FACEBOOK</a>
+    </footer>
+
+</body>
+</html>

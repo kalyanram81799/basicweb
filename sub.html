@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 80px;
+        }
+
+        
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-50px) scale(0.5);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card1 {
+            border-radius: 15px;
+            background-color: white;
+            overflow: hidden;
+            width: 275px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            animation: slideInFromTop 1s ease-out; /* Animation applied here */
+            align-items: center;
+        }
+
+        .card1:hover {
+            transform: scale(1.05);
+        }
+
+        .card1 img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card2 {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card2 p {
+            font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .card2 button {
+            transition: transform 0.2s ease-in-out;
+            font-weight: 400;
+            background-color: #15ff00;
+            border-radius: 15px;
+            border: none;
+            color: white;
+            padding: 10px 12px;
+            width: 200px;
+        }
+
+        .card2 button:hover {
+            transform: scale(1.1);
+            color: white;
+            font-weight: 300;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let captcha = ""; // Variable to store the generated CAPTCHA
+
+        // Function to generate a random OTP
+        function capgen() {
+            let chars = "0123456789";
+            captcha = "";
+            for (let i = 0; i < 6; i++) {
+                captcha += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById("cap").innerText = captcha;
+            document.getElementById("res").innerText = ""; // Clear previous result
+            document.getElementById("userinput").value = ""; // Clear input field
+        }
+
+        // Function to generate ID on page load (or when a button is clicked)
+        window.onload = function() {
+            capgen(); // Automatically generate the CAPTCHA on page load
+        }
+    </script>
+
+    <div class="card">
+        <div class="card1">
+            <img src="tq.jpg" alt="he">
+            <div class="card2">
+                <p>YOU ARE REGISTERED SUCCESSFULLY</p>
+                <p>YOUR ID IS:</p>
+                <p id="cap" style="font-size: 24px; font-weight: bold;"></p>
+                <button type="button" onclick="window.location.href='main.html';">OK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

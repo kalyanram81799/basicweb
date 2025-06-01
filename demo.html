@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title Man</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5cd;
+            font-family: "Inter", sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+        }
+
+        nav h1 {
+            color: white;
+        }
+
+        nav > ul {
+            display: flex;
+            align-items: center;
+        }
+
+        nav > ul > li {
+            list-style: none;
+            margin-right: 16px;
+            color: white;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #ff3d0036;
+        }
+
+        .card-body {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card-body button {
+            padding: 10px 20px;
+            background-color: #ff6a00;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-body button:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: orange;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>LIFE CONSULT</h1>
+        <ul>
+            <li>HOME</li>
+            <li>CONTENT</li>
+            <li>HELP</li>
+            <li>DESK</li>
+            <li>DOCTOR</li>
+        </ul>
+    </nav>
+
+    <!-- Card Section -->
+    <div class="card-container">
+        <!-- Heart Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Heart Image">
+            <div class="card-body">
+                <p>HEART ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+
+        <!-- Brain Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Brain Image">
+            <div class="card-body">
+                <p>BRAIN ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+
+        <!-- Lungs Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Lungs Image">
+            <div class="card-body">
+                <p>LUNGS ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+
+        <!-- Eye Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Eye Image">
+            <div class="card-body">
+                <p>EYE ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+
+        <!-- Liver Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Liver Image">
+            <div class="card-body">
+                <p>LIVER ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+
+        <!-- Nerve Issues Card -->
+        <div class="card">
+            <img src="./1000036730.jpg" alt="Nerve Image">
+            <div class="card-body">
+                <p>NERVE ISSUES</p>
+                <button>CLICK HERE</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Health Guide. All Rights Reserved.</p>
+        <p>For more health tips, follow us on:</p>
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a> |
+        <a href="#">Instagram</a>
+    </footer>
+</body>
+</html>

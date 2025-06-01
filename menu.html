@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Menu Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+            animation: slideUp 1s ease-out;
+
+        }
+        .menu-item {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            /* animation: fadeIn 0.5s ease-out 0.5s; */
+
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+        .menu-item h3 {
+            color: #333;
+        }
+        .menu-item p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* position: fixed; */
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+    </header>
+
+    <div class="menu-container">
+        <div class="menu-item">
+            <h3>APPOINTMENT BOOKING</h3>
+            <img src="dd.jpg" alt="Emergency">
+            <p>Book an appointment in a hospital based on your disease and your nearby location. Pay online and book an appointment on our website. It saves a lot of time, like waiting at the counters for an appointment.</p>
+        </div>
+        <div class="menu-item">
+            <h3>EMERGENCY</h3>
+            <img src="ee.jpg" alt="Emergency Contact">
+            <p>CONTACT EMERGENCY NUMBER: <a href="#">108</a></p>
+            <p>Contact any hospital according to your location in case of emergency.</p>
+        </div>
+        <div class="menu-item">
+            <h3>MEDICINE DELIVERY</h3>
+            <img src="mm1.jpg" alt="Medicine Delivery">
+            <p>Book medicines online for fastest delivery within hours. Select the medicines you need, add your location, and book the medicines. Online payment is available, or you can choose cash on delivery.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Health Guide. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

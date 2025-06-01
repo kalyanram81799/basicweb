@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - MediQuick</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Medicines</a></li>
+            <li><a href="#" class="nav-categories">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search medicines..." id="search-input">
+            <button class="search-btn" id="search-btn"></button>
+          </div>
+          
+          <div class="header-buttons">
+            <a href="account.html" class="btn-account" id="account-btn"></a>
+            <a href="cart.html" class="btn-cart" id="cart-btn">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+          
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">MediQuick</div>
+      <button class="mobile-menu-close" id="mobile-menu-close">×</button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Medicines</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Prescriptions</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">›</span>
+          <a href="products.html">Medicines</a>
+          <span class="breadcrumb-separator">›</span>
+          <span class="current" id="product-breadcrumb">Product Name</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="product-detail">
+      <div class="container">
+        <div class="product-detail-layout">
+          <div class="product-images">
+            <div class="product-main-image">
+              <img src="https://via.placeholder.com/500x500" alt="Product Image" id="main-product-image">
+              <div class="product-image-zoom-icon" id="zoom-icon"></div>
+            </div>
+            <div class="product-thumbnails" id="product-thumbnails">
+              <div class="product-thumbnail active">
+                <img src="https://via.placeholder.com/100x100" alt="Product Thumbnail 1">
+              </div>
+              <div class="product-thumbnail">
+                <img src="https://via.placeholder.com/100x100" alt="Product Thumbnail 2">
+              </div>
+              <div class="product-thumbnail">
+                <img src="https://via.placeholder.com/100x100" alt="Product Thumbnail 3">
+              </div>
+              <div class="product-thumbnail">
+                <img src="https://via.placeholder.com/100x100" alt="Product Thumbnail 4">
+              </div>
+            </div>
+          </div>
+          
+          <div class="product-info">
+            <div class="product-badges">
+              <span class="badge badge-bestseller">Bestseller</span>
+              <span class="badge badge-new">New</span>
+            </div>
+            
+            <h1 class="product-title" id="product-title">Product Name</h1>
+            
+            <div class="product-meta">
+              <div class="product-rating">
+                <div class="stars">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star half-filled">★</span>
+                </div>
+                <a href="#reviews" class="rating-count">Based on 256 reviews</a>
+              </div>
+              
+              <div class="product-brand">
+                By <a href="#" id="product-brand">Brand Name</a>
+              </div>
+            </div>
+            
+            <div class="product-price-container">
+              <div class="product-price">
+                <span class="current-price" id="product-price">$24.99</span>
+                <span class="original-price" id="product-original-price">$32.99</span>
+                <span class="discount-percentage">-24%</span>
+              </div>
+              <div class="product-stock in-stock" id="product-stock">
+                <span class="stock-icon"></span>
+                <span class="stock-text">In Stock</span>
+              </div>
+            </div>
+            
+            <div class="product-short-description" id="product-short-description">
+              <p>This is a short description of the product that highlights its key benefits and uses. It gives customers a quick overview of what the product does.</p>
+            </div>
+            
+            <div class="product-options">
+              <div class="product-option">
+                <label for="product-strength">Strength:</label>
+                <div class="option-buttons" id="product-strength">
+                  <button class="option-button active">10mg</button>
+                  <button class="option-button">20mg</button>
+                  <button class="option-button">50mg</button>
+                </div>
+              </div>
+              
+              <div class="product-option">
+                <label for="product-quantity">Quantity:</label>
+                <div class="option-buttons" id="product-quantity">
+                  <button class="option-button active">30 tablets</button>
+                  <button class="option-button">60 tablets</button>
+                  <button class="option-button">90 tablets</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="product-prescription" id="product-prescription">
+              <div class="prescription-icon"></div>
+              <div class="prescription-info">
+                <h3>Prescription Required</h3>
+                <p>You'll need to upload a valid prescription during checkout.</p>
+                <a href="#" class="prescription-info-link">Learn more</a>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="quantity-btn quantity-decrease" id="quantity-decrease">-</button>
+                <input type="number" value="1" min="1" max="10" id="quantity-input">
+                <button class="quantity-btn quantity-increase" id="quantity-increase">+</button>
+              </div>
+              
+              <button class="btn btn-primary btn-add-to-cart" id="add-to-cart">
+                <span class="cart-icon"></span>
+                <span>Add to Cart</span>
+              </button>
+              
+              <button class="btn-wishlist" id="add-to-wishlist">
+                <span class="wishlist-icon"></span>
+              </button>
+            </div>
+            
+            <div class="product-delivery">
+              <div class="delivery-option">
+                <div class="delivery-icon standard"></div>
+                <div class="delivery-info">
+                  <h3>Standard Delivery</h3>
+                  <p>2-4 business days</p>
+                </div>
+              </div>
+              
+              <div class="delivery-option">
+                <div class="delivery-icon express"></div>
+                <div class="delivery-info">
+                  <h3>Express Delivery</h3>
+                  <p>Same day (order before 2PM)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="product-tabs">
+          <div class="tabs-header">
+            <button class="tab-button active" data-tab="description">Description</button>
+            <button class="tab-button" data-tab="details">Details & Ingredients</button>
+            <button class="tab-button" data-tab="usage">Dosage & Usage</button>
+            <button class="tab-button" data-tab="reviews" id="reviews-tab">Reviews <span class="review-count">(256)</span></button>
+          </div>
+          
+          <div class="tabs-content">
+            <div class="tab-pane active" id="tab-description">
+              <div class="tab-content-inner" id="product-description">
+                <h2>Product Description</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                
+                <h3>Key Benefits</h3>
+                <ul>
+                  <li>Benefit one of the product with some details.</li>
+                  <li>Second major benefit that users experience.</li>
+                  <li>Third important benefit to highlight.</li>
+                  <li>Fourth benefit that makes this product special.</li>
+                </ul>
+                
+                <h3>Who Should Use This?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+            
+            <div class="tab-pane" id="tab-details">
+              <div class="tab-content-inner" id="product-details">
+                <h2>Product Details</h2>
+                
+                <div class="product-attributes">
+                  <div class="attribute">
+                    <span class="attribute-name">Brand</span>
+                    <span class="attribute-value">Brand Name</span>
+                  </div>
+                  <div class="attribute">
+                    <span class="attribute-name">Manufacturer</span>
+                    <span class="attribute-value">Manufacturer Name</span>
+                  </div>
+                  <div class="attribute">
+                    <span class="attribute-name">SKU</span>
+                    <span class="attribute-value">MED12345</span>
+                  </div>
+                  <div class="attribute">
+                    <span class="attribute-name">Storage</span>
+                    <span class="attribute-value">Store below 25°C in a dry place</span>
+                  </div>
+                  <div class="attribute">
+                    <span class="attribute-name">Package Size</span>
+                    <span class="attribute-value">30 tablets</span>
+                  </div>
+                  <div class="attribute">
+                    <span class="attribute-name">Expiry</span>
+                    <span class="attribute-value">24 months from manufacturing date</span>
+                  </div>
+                </div>
+                
+                <h3>Ingredients</h3>
+                <p>Active ingredient: Lorem ipsum (10mg per tablet)</p>
+                
+                <p>Inactive ingredients: Microcrystalline cellulose, lactose monohydrate, croscarmellose sodium, magnesium stearate, hypromellose, titanium dioxide, polyethylene glycol, iron oxide yellow, iron oxide red.</p>
+                
+                <div class="warning-box">
+                  <h3>Important Information</h3>
+                  <p>Always read the label. Follow the directions for use. If symptoms persist, talk to your health professional.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-pane" id="tab-usage">
+              <div class="tab-content-inner" id="product-usage">
+                <h2>Dosage & Usage Instructions</h2>
+                
+                <div class="usage-section">
+                  <h3>Recommended Dosage</h3>
+                  <p>Adults: One tablet daily with water, preferably with food.</p>
+                  <p>Children under 12 years: Not recommended.</p>
+                </div>
+                
+                <div class="usage-section">
+                  <h3>How to Take</h3>
+                  <p>Swallow tablet whole with a full glass of water. Do not crush, chew, or break the tablet.</p>
+                </div>
+                
+                <div class="usage-section">
+                  <h3>Duration of Use</h3>
+                  <p>Use as directed by your healthcare professional. If using for a chronic condition, regular use for 2-3 weeks may be required before full benefits are observed.</p>
+                </div>
+                
+                <div class="usage-section">
+                  <h3>Missed Dose</h3>
+                  <p>If you miss a dose, take it as soon as you remember. If it is almost time for your next dose, skip the missed dose and continue with your regular dosing schedule. Do not take a double dose to make up for a missed one.</p>
+                </div>
+                
+                <div class="warning-box">
+                  <h3>Warnings & Precautions</h3>
+                  <ul>
+                    <li>Do not exceed the stated dose.</li>
+                    <li>Not suitable for pregnant or breastfeeding women without medical advice.</li>
+                    <li>Consult your doctor before use if you have any existing medical conditions or are taking other medications.</li>
+                    <li>May cause drowsiness. If affected, do not drive or operate machinery.</li>
+                    <li>Keep out of reach of children.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-pane" id="tab-reviews">
+              <div class="tab-content-inner">
+                <div class="reviews-header">
+                  <h2>Customer Reviews</h2>
+                  <button class="btn btn-primary" id="write-review-btn">Write a Review</button>
+                </div>
+                
+                <div class="reviews-summary">
+                  <div class="reviews-overall">
+                    <div class="overall-rating">4.5</div>
+                    <div class="overall-stars">
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star filled">★</span>
+                      <span class="star half-filled">★</span>
+                    </div>
+                    <div class="reviews-count">Based on 256 reviews</div>
+                  </div>
+                  
+                  <div class="rating-breakdown">
+                    <div class="rating-bar">
+                      <div class="rating-level">
+                        <span>5</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="rating-bar-container">
+                        <div class="rating-bar-fill" style="width: 75%"></div>
+                      </div>
+                      <div class="rating-percent">75%</div>
+                    </div>
+                    <div class="rating-bar">
+                      <div class="rating-level">
+                        <span>4</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="rating-bar-container">
+                        <div class="rating-bar-fill" style="width: 18%"></div>
+                      </div>
+                      <div class="rating-percent">18%</div>
+                    </div>
+                    <div class="rating-bar">
+                      <div class="rating-level">
+                        <span>3</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="rating-bar-container">
+                        <div class="rating-bar-fill" style="width: 5%"></div>
+                      </div>
+                      <div class="rating-percent">5%</div>
+                    </div>
+                    <div class="rating-bar">
+                      <div class="rating-level">
+                        <span>2</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="rating-bar-container">
+                        <div class="rating-bar-fill" style="width: 1%"></div>
+                      </div>
+                      <div class="rating-percent">1%</div>
+                    </div>
+                    <div class="rating-bar">
+                      <div class="rating-level">
+                        <span>1</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="rating-bar-container">
+                        <div class="rating-bar-fill" style="width: 1%"></div>
+                      </div>
+                      <div class="rating-percent">1%</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="reviews-filter">
+                  <div class="filter-by">
+                    <label for="reviews-sort">Sort by:</label>
+                    <select id="reviews-sort" class="reviews-sort-select">
+                      <option value="recent">Most Recent</option>
+                      <option value="helpful">Most Helpful</option>
+                      <option value="highest">Highest Rating</option>
+                      <option value="lowest">Lowest Rating</option>
+                    </select>
+                  </div>
+                  
+                  <div class="filter-by-rating">
+                    <label>Filter by rating:</label>
+                    <div class="rating-filter-options">
+                      <button class="rating-filter-btn active">All</button>
+                      <button class="rating-filter-btn">5★</button>
+                      <button class="rating-filter-btn">4★</button>
+                      <button class="rating-filter-btn">3★</button>
+                      <button class="rating-filter-btn">2★</button>
+                      <button class="rating-filter-btn">1★</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="reviews-list" id="reviews-list">
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="review-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                      </div>
+                      <div class="review-title">Very effective medication</div>
+                    </div>
+                    
+                    <div class="review-meta">
+                      <span class="review-author">Michael S.</span>
+                      <span class="review-date">Verified Purchase • June 15, 2025</span>
+                    </div>
+                    
+                    <div class="review-content">
+                      <p>I've been using this product for three months and have seen remarkable improvement in my condition. The dosage is perfect, and I haven't experienced any significant side effects. Would definitely recommend to others with similar issues.</p>
+                    </div>
+                    
+                    <div class="review-feedback">
+                      <div class="review-helpful">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn">Yes (24)</button>
+                        <button class="helpful-btn">No (2)</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="review-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                      </div>
+                      <div class="review-title">Good medicine but takes time</div>
+                    </div>
+                    
+                    <div class="review-meta">
+                      <span class="review-author">Jennifer L.</span>
+                      <span class="review-date">Verified Purchase • May 28, 2025</span>
+                    </div>
+                    
+                    <div class="review-content">
+                      <p>The medicine works as described, but it took about two weeks for me to notice any significant effects. The taste is a bit bitter, but that's expected. The packaging is secure and convenient with the days of the week marked clearly.</p>
+                    </div>
+                    
+                    <div class="review-feedback">
+                      <div class="review-helpful">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn">Yes (18)</button>
+                        <button class="helpful-btn">No (3)</button>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="review-item">
+                    <div class="review-header">
+                      <div class="review-rating">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                      </div>
+                      <div class="review-title">Excellent customer service</div>
+                    </div>
+                    
+                    <div class="review-meta">
+                      <span class="review-author">Robert T.</span>
+                      <span class="review-date">Verified Purchase • May 12, 2025</span>
+                    </div>
+                    
+                    <div class="review-content">
+                      <p>Not only is the medication effective, but I was impressed with the delivery service. My order arrived ahead of schedule, and when I had questions about potential interactions with other medications, their pharmacist was very helpful and prompt in responding.</p>
+                    </div>
+                    
+                    <div class="review-feedback">
+                      <div class="review-helpful">
+                        <span>Was this helpful?</span>
+                        <button class="helpful-btn">Yes (32)</button>
+                        <button class="helpful-btn">No (1)</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="reviews-pagination">
+                  <button class="reviews-pagination-prev" disabled>Previous</button>
+                  <div class="reviews-pagination-numbers">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <span class="pagination-dots">...</span>
+                    <a href="#">26</a>
+                  </div>
+                  <button class="reviews-pagination-next">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="related-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Related Products</h2>
+          <p>You may also be interested in these products</p>
+        </div>
+        
+        <div class="related-slider" id="related-products">
+          <!-- Related products will be loaded via JavaScript -->
+        </div>
+        
+        <div class="slider-controls">
+          <button class="slider-prev" id="related-prev"></button>
+          <button class="slider-next" id="related-next"></button>
+        </div>
+      </div>
+    </section>
+    
+    <div class="product-image-modal" id="image-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modal-close">×</button>
+        <img src="https://via.placeholder.com/800x800" alt="Product Image" id="modal-image">
+      </div>
+    </div>
+    
+    <div class="review-modal" id="review-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="review-modal-close">×</button>
+        <div class="review-form-container">
+          <h2>Write a Review</h2>
+          <form id="review-form">
+            <div class="form-group">
+              <label for="review-rating">Rating</label>
+              <div class="rating-selector" id="rating-selector">
+                <span class="rating-star" data-rating="1">★</span>
+                <span class="rating-star" data-rating="2">★</span>
+                <span class="rating-star" data-rating="3">★</span>
+                <span class="rating-star" data-rating="4">★</span>
+                <span class="rating-star" data-rating="5">★</span>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="review-title">Review Title</label>
+              <input type="text" id="review-title" required placeholder="Summarize your experience">
+            </div>
+            
+            <div class="form-group">
+              <label for="review-content">Review</label>
+              <textarea id="review-content" rows="5" required placeholder="Share your experience with this product"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="review-name">Your Name</label>
+              <input type="text" id="review-name" required placeholder="How you want to be identified">
+            </div>
+            
+            <div class="form-group">
+              <label for="review-email">Email Address</label>
+              <input type="email" id="review-email" required placeholder="Your email (won't be published)">
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" id="cancel-review">Cancel</button>
+              <button type="submit" class="btn btn-primary">Submit Review</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </div>
+          <p class="footer-tagline">Your trusted medicine delivery service</p>
+          <div class="social-links">
+            <a href="#" class="social-link social-facebook"></a>
+            <a href="#" class="social-link social-twitter"></a>
+            <a href="#" class="social-link social-instagram"></a>
+            <a href="#" class="social-link social-linkedin"></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Medicines</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li class="contact-phone">1-800-MEDIQUICK</li>
+            <li class="contact-email">support@mediquick.com</li>
+            <li class="contact-hours">
+              <span>Hours: 8AM - 10PM</span>
+              <span>Monday to Sunday</span>
+            </li>
+          </ul>
+          <div class="newsletter">
+            <h3>Subscribe to Newsletter</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2025 MediQuick. All rights reserved.</p>
+        </div>
+        <div class="payment-methods">
+          <span class="payment payment-visa"></span>
+          <span class="payment payment-mastercard"></span>
+          <span class="payment payment-amex"></span>
+          <span class="payment payment-paypal"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="back-to-top"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

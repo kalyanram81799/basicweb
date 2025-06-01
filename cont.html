@@ -1,0 +1,135 @@
+<html>
+<head>
+    <style>
+        .con {
+            background-color: aqua;
+            color: black;
+            border-radius: 15px;
+            border-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 60%;
+            margin-left: 235px;
+            height: 365px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .con:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .vi {
+            width: 60%;
+            height: 323px;
+            border-radius: 15px;
+            align-items: center;
+            margin: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact-info p {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 900;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 65px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CONTACT US</h1>
+    <div class="con">
+        <div class="vi">
+            <img src="CONTA.jpg" alt="Contact Image" class="vi">
+        </div>
+        <div class="contact-info">
+            <p>ANDHRAPRADESH: <a href="#">+91 77885509811</a></p>
+            <p>TELANGANA: <a href="#">+91 77885509811</a></p>
+            <p>UTTARPREADESH: <a href="#">+91 77885509811</a></p>
+            <p>DELHI: <a href="#">+91 77885509811</a></p>
+            <p>MUMBAI: <a href="#">+91 77885509811</a></p>
+            <p>CHENNAI: <a href="#">+91 77885509811</a></p>
+            <p>BENGALURU: <a href="#">+91 77885509811</a></p>
+        </div>
+    </div><br>
+    <div class="con">
+        <div class="vi">
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\Website\whi.jpg" alt="Contact Image" class="vi">
+        </div>
+        <div class="contact-info">
+            <p>ANDHRAPRADESH: <a href="#">+91 77885509811</a></p>
+            <p>TELANGANA: <a href="#">+91 77885509811</a></p>
+            <p>UTTARPREADESH: <a href="#">+91 77885509811</a></p>
+            <p>DELHI: <a href="#">+91 77885509811</a></p>
+            <p>MUMBAI: <a href="#">+91 77885509811</a></p>
+            <p>CHENNAI: <a href="#">+91 77885509811</a></p>
+            <p>BENGALURU: <a href="#">+91 77885509811</a></p>
+        </div>
+    </div>
+    <br>
+    <div class="con">
+        <div class="vi">
+            <img src="cc.jpg" alt="Contact Image" class="vi">
+        </div>
+            <div class="contact-info">
+                <p>ANDHRAPRADESH: <a href="#">aplifeco@gmail.com</a></p>
+                <p>TELANGANA: <a href="#">tslifeco@gmail.com</a></p>
+                <p>UTTARPREADESH: <a href="#">uplifeco@gmail.com</a></p>
+                <p>DELHI: <a href="#">dellifeco@gmail.com</a></p>
+                <p>MUMBAI: <a href="#">mumlifeco@gmail.com</a></p>
+                <p>CHENNAI: <a href="#">tnfeco@gmail.com</a></p>
+                <p>BENGALURU: <a href="#">benlifeco@gmail.com</a></p>
+            </div>
+    </div>
+</body>
+</html>

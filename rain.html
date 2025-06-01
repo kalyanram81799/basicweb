@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Heart Hospitals - Registration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .banner {
+            margin-top: 23px;
+            margin-bottom: 122px;
+            margin-left: 73px;
+            width: 90%;
+            height: 500px;
+            background-image: url('img.jpeg.png'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .registration-section {
+            background: #fff;
+            max-width: 900px;
+            margin: -50px auto 30px auto;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-radius: 12px;
+        }
+
+        .registration-section h1 {
+            text-align: center;
+            color: #f70404;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form p {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        input[type="time"] {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>RAINBOW HEART HOSPITALS</nav>
+
+    <div class="banner"></div>
+
+    <div class="registration-section">
+        <h1>Registration Form</h1>
+        <form onsubmit="handleFormSubmit(event)">
+            <p>Patient Name:</p>
+            <input type="text" name="fullname" placeholder="Enter Full Name" required>
+
+            <p>Phone No:</p>
+            <input type="number" name="phone" placeholder="Enter Mobile Number" required>
+
+            <p>E-mail:</p>
+            <input type="email" name="email" placeholder="example@domain.com" required>
+
+            <p>Sex:</p>
+            <div class="gender-options">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" name="gender" value="Others" required> Others</label>
+            </div>
+
+            <p>Permanent Address:</p>
+            <input type="text" name="address" placeholder="Enter Your Address" required>
+
+            <p>Age:</p>
+            <input type="number" name="age" placeholder="Enter Your Age" required>
+
+            <p>Select Date:</p>
+            <input type="date" name="date" required>
+
+            <p>Select Slot:</p>
+            <input type="time" name="time" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Registration successful!');
+            window.location.href = 'sub.html';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f8;
+      color: #171616;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+      height: 60px;
+      background-color: #1565c0;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .page-container {
+      width: 100%;
+      max-width: 900px;
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    .top-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    form {
+      background: #63ece5;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      width: 100%;
+    }
+
+    form h1 {
+      color: #f70404;
+      font-family: 'Times New Roman', Times, serif;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      font-size: 18px;
+      margin: 12px 0 6px;
+      color: #0a0a0a;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background: rgba(253, 253, 252, 0.8);
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="number"]:hover,
+    input[type="date"]:hover,
+    input[type="time"]:hover {
+      border-color: #f70404;
+      box-shadow: 0 0 8px rgba(247, 4, 4, 0.8);
+    }
+
+    .gender-options {
+      margin: 10px 0 15px;
+    }
+
+    .gender-options label {
+      display: inline-block;
+      margin-right: 20px;
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #ecf3f2;
+      color: #0a0a0a;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #ff9800;
+      color: rgb(255, 255, 255);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>SMITHRAA HOSPITAL</nav>
+
+  <div class="page-container">
+
+    <img src="img.jpeg.png" alt="Hospital Image" class="top-image" />
+
+    <form action="#" method="post" onsubmit="handleFormSubmit(event)">
+      <h1>Registration Form</h1>
+
+      <label for="fullname">Patient Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter Full Name" required />
+
+      <label for="phone">Phone No:</label>
+      <input type="number" id="phone" name="phone" placeholder="Enter Mobile Number" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="example@domain.com" required />
+
+      <label>Sex:</label>
+      <div class="gender-options">
+        <label><input type="radio" name="Gender" value="Male" required /> Male</label>
+        <label><input type="radio" name="Gender" value="Female" required /> Female</label>
+        <label><input type="radio" name="Gender" value="Others" required /> Others</label>
+      </div>
+
+      <label for="address">Permanent Address:</label>
+      <input type="text" id="address" name="address" placeholder="Enter Your Address" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" placeholder="Enter Your Age" required />
+
+      <label for="date">Select Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="time">Select Slot:</label>
+      <input type="time" id="time" name="time" required />
+
+      <button type="submit" >Book Now</button>
+    </form>
+  </div>
+  <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Registration successful!');
+            window.location.href = 'sub.html';
+        }
+        </script>
+
+</body>
+</html>

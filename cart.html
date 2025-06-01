@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - MediQuick</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="index.html">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Medicines</a></li>
+            <li><a href="#" class="nav-categories">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-actions">
+          <div class="search-box">
+            <input type="text" placeholder="Search medicines..." id="search-input">
+            <button class="search-btn" id="search-btn"></button>
+          </div>
+          
+          <div class="header-buttons">
+            <a href="account.html" class="btn-account" id="account-btn"></a>
+            <a href="cart.html" class="btn-cart active" id="cart-btn">
+              <span class="cart-count" id="cart-count">0</span>
+            </a>
+          </div>
+          
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">MediQuick</div>
+      <button class="mobile-menu-close" id="mobile-menu-close">×</button>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Medicines</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Prescriptions</a></li>
+        <li><a href="account.html">My Account</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Your Cart</h1>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">›</span>
+          <span class="current">Cart</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="cart-section">
+      <div class="container">
+        <div class="cart-content" id="cart-content">
+          <!-- Cart items will be loaded here via JavaScript -->
+          <div class="cart-items" id="cart-items">
+            <div class="cart-item" data-id="1">
+              <div class="cart-item-image">
+                <img src="https://via.placeholder.com/100x100" alt="Product image">
+              </div>
+              <div class="cart-item-details">
+                <div class="cart-item-info">
+                  <h3 class="cart-item-title">
+                    <a href="product-detail.html?id=1">Example Medicine Name 10mg</a>
+                  </h3>
+                  <div class="cart-item-meta">
+                    <div class="cart-item-brand">By PharmaPlus</div>
+                    <div class="cart-item-options">Strength: 10mg | Quantity: 30 tablets</div>
+                  </div>
+                </div>
+                <div class="cart-item-pricing">
+                  <div class="cart-item-quantity">
+                    <button class="quantity-btn quantity-decrease">-</button>
+                    <input type="number" value="1" min="1" max="10" class="quantity-input">
+                    <button class="quantity-btn quantity-increase">+</button>
+                  </div>
+                  <div class="cart-item-price">
+                    <div class="cart-item-current-price">$24.99</div>
+                    <div class="cart-item-original-price">$32.99</div>
+                  </div>
+                </div>
+                <div class="cart-item-actions">
+                  <button class="cart-item-save">Save for Later</button>
+                  <button class="cart-item-remove">Remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-item" data-id="2">
+              <div class="cart-item-image">
+                <img src="https://via.placeholder.com/100x100" alt="Product image">
+              </div>
+              <div class="cart-item-details">
+                <div class="cart-item-info">
+                  <h3 class="cart-item-title">
+                    <a href="product-detail.html?id=2">Another Medicine Example 20mg</a>
+                  </h3>
+                  <div class="cart-item-meta">
+                    <div class="cart-item-brand">By MedCure</div>
+                    <div class="cart-item-options">Strength: 20mg | Quantity: 60 tablets</div>
+                  </div>
+                </div>
+                <div class="cart-item-pricing">
+                  <div class="cart-item-quantity">
+                    <button class="quantity-btn quantity-decrease">-</button>
+                    <input type="number" value="2" min="1" max="10" class="quantity-input">
+                    <button class="quantity-btn quantity-increase">+</button>
+                  </div>
+                  <div class="cart-item-price">
+                    <div class="cart-item-current-price">$39.98</div>
+                    <div class="cart-item-original-price">$45.98</div>
+                  </div>
+                </div>
+                <div class="cart-item-actions">
+                  <button class="cart-item-save">Save for Later</button>
+                  <button class="cart-item-remove">Remove</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-prescription-items">
+              <div class="prescription-header">
+                <div class="prescription-icon"></div>
+                <h3>Prescription Required</h3>
+              </div>
+              <div class="prescription-message">
+                <p>Some items in your cart require a valid prescription. You'll need to upload your prescription during checkout.</p>
+                <a href="#" class="prescription-info-link">Learn more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-saved-items">
+            <h2>Saved for Later (3 items)</h2>
+            <div class="saved-items-list" id="saved-items">
+              <div class="saved-item" data-id="3">
+                <div class="saved-item-image">
+                  <img src="https://via.placeholder.com/80x80" alt="Product image">
+                </div>
+                <div class="saved-item-details">
+                  <div class="saved-item-info">
+                    <h3 class="saved-item-title">
+                      <a href="product-detail.html?id=3">Saved Medicine Example</a>
+                    </h3>
+                    <div class="saved-item-meta">
+                      <div class="saved-item-brand">By HealthFirst</div>
+                      <div class="saved-item-options">Strength: 5mg | Quantity: 30 tablets</div>
+                    </div>
+                  </div>
+                  <div class="saved-item-price">$19.99</div>
+                  <div class="saved-item-actions">
+                    <button class="saved-item-move-to-cart">Move to Cart</button>
+                    <button class="saved-item-remove">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="saved-item" data-id="4">
+                <div class="saved-item-image">
+                  <img src="https://via.placeholder.com/80x80" alt="Product image">
+                </div>
+                <div class="saved-item-details">
+                  <div class="saved-item-info">
+                    <h3 class="saved-item-title">
+                      <a href="product-detail.html?id=4">Another Saved Medicine</a>
+                    </h3>
+                    <div class="saved-item-meta">
+                      <div class="saved-item-brand">By CureVital</div>
+                      <div class="saved-item-options">Strength: 25mg | Quantity: 60 tablets</div>
+                    </div>
+                  </div>
+                  <div class="saved-item-price">$29.99</div>
+                  <div class="saved-item-actions">
+                    <button class="saved-item-move-to-cart">Move to Cart</button>
+                    <button class="saved-item-remove">Remove</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="saved-item" data-id="5">
+                <div class="saved-item-image">
+                  <img src="https://via.placeholder.com/80x80" alt="Product image">
+                </div>
+                <div class="saved-item-details">
+                  <div class="saved-item-info">
+                    <h3 class="saved-item-title">
+                      <a href="product-detail.html?id=5">Third Saved Medicine</a>
+                    </h3>
+                    <div class="saved-item-meta">
+                      <div class="saved-item-brand">By LifeWell</div>
+                      <div class="saved-item-options">Strength: 100mg | Quantity: 30 tablets</div>
+                    </div>
+                  </div>
+                  <div class="saved-item-price">$34.99</div>
+                  <div class="saved-item-actions">
+                    <button class="saved-item-move-to-cart">Move to Cart</button>
+                    <button class="saved-item-remove">Remove</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cart-sidebar">
+          <div class="cart-summary">
+            <h2>Order Summary</h2>
+            
+            <div class="summary-items">
+              <div class="summary-item">
+                <span class="summary-label">Subtotal (3 items)</span>
+                <span class="summary-value" id="subtotal">$64.97</span>
+              </div>
+              
+              <div class="summary-item">
+                <span class="summary-label">Discount</span>
+                <span class="summary-value discount" id="discount">-$14.00</span>
+              </div>
+              
+              <div class="summary-item">
+                <span class="summary-label">Shipping</span>
+                <span class="summary-value" id="shipping">$4.99</span>
+              </div>
+              
+              <div class="summary-item">
+                <span class="summary-label">Tax</span>
+                <span class="summary-value" id="tax">$5.09</span>
+              </div>
+            </div>
+            
+            <div class="summary-total">
+              <span class="total-label">Total</span>
+              <span class="total-value" id="total">$61.05</span>
+            </div>
+            
+            <a href="checkout.html" class="btn btn-primary btn-checkout">Proceed to Checkout</a>
+            
+            <div class="secure-checkout">
+              <div class="secure-icon"></div>
+              <span>Secure Checkout</span>
+            </div>
+            
+            <div class="summary-footer">
+              <div class="payment-methods">
+                <span class="payment payment-visa"></span>
+                <span class="payment payment-mastercard"></span>
+                <span class="payment payment-amex"></span>
+                <span class="payment payment-paypal"></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="coupon-section">
+            <h3>Apply Coupon</h3>
+            <div class="coupon-form">
+              <input type="text" placeholder="Enter coupon code" id="coupon-input">
+              <button class="btn btn-apply-coupon" id="apply-coupon">Apply</button>
+            </div>
+          </div>
+          
+          <div class="continue-shopping">
+            <a href="products.html" class="btn btn-outline btn-continue">Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="empty-cart" id="empty-cart" style="display: none;">
+      <div class="container">
+        <div class="empty-cart-content">
+          <div class="empty-cart-icon"></div>
+          <h2>Your cart is empty</h2>
+          <p>Looks like you haven't added any medicines to your cart yet.</p>
+          <a href="products.html" class="btn btn-primary">Start Shopping</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="recently-viewed">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recently Viewed</h2>
+        </div>
+        <div class="recently-viewed-slider" id="recently-viewed-products">
+          <div class="product-card">
+            <div class="product-badge">New</div>
+            <a href="product-detail.html?id=6" class="product-image">
+              <img src="https://via.placeholder.com/300x300" alt="Product image">
+            </a>
+            <div class="product-info">
+              <a href="product-detail.html?id=6" class="product-name">Recently Viewed Medicine 1</a>
+              <div class="product-rating">
+                <div class="stars">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star half-filled">★</span>
+                </div>
+                <span class="rating-count">(42)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$28.99</span>
+                <span class="original-price">$35.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="product-detail.html?id=7" class="product-image">
+              <img src="https://via.placeholder.com/300x300" alt="Product image">
+            </a>
+            <div class="product-info">
+              <a href="product-detail.html?id=7" class="product-name">Recently Viewed Medicine 2</a>
+              <div class="product-rating">
+                <div class="stars">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-count">(28)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$19.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-badge product-badge-sale">-20%</div>
+            <a href="product-detail.html?id=8" class="product-image">
+              <img src="https://via.placeholder.com/300x300" alt="Product image">
+            </a>
+            <div class="product-info">
+              <a href="product-detail.html?id=8" class="product-name">Recently Viewed Medicine 3</a>
+              <div class="product-rating">
+                <div class="stars">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                </div>
+                <span class="rating-count">(56)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$24.99</span>
+                <span class="original-price">$31.99</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <a href="product-detail.html?id=9" class="product-image">
+              <img src="https://via.placeholder.com/300x300" alt="Product image">
+            </a>
+            <div class="product-info">
+              <a href="product-detail.html?id=9" class="product-name">Recently Viewed Medicine 4</a>
+              <div class="product-rating">
+                <div class="stars">
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star filled">★</span>
+                  <span class="star half-filled">★</span>
+                  <span class="star">★</span>
+                </div>
+                <span class="rating-count">(17)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$15.99</span>
+                <span class="original-price">$18.99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-prev" id="recently-viewed-prev"></button>
+          <button class="slider-next" id="recently-viewed-next"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <span class="logo-icon"></span>
+            <span class="logo-text">MediQuick</span>
+          </div>
+          <p class="footer-tagline">Your trusted medicine delivery service</p>
+          <div class="social-links">
+            <a href="#" class="social-link social-facebook"></a>
+            <a href="#" class="social-link social-twitter"></a>
+            <a href="#" class="social-link social-instagram"></a>
+            <a href="#" class="social-link social-linkedin"></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Medicines</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Prescriptions</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul class="footer-links">
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="contact-info">
+            <li class="contact-phone">1-800-MEDIQUICK</li>
+            <li class="contact-email">support@mediquick.com</li>
+            <li class="contact-hours">
+              <span>Hours: 8AM - 10PM</span>
+              <span>Monday to Sunday</span>
+            </li>
+          </ul>
+          <div class="newsletter">
+            <h3>Subscribe to Newsletter</h3>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email address" required>
+              <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          <p>&copy; 2025 MediQuick. All rights reserved.</p>
+        </div>
+        <div class="payment-methods">
+          <span class="payment payment-visa"></span>
+          <span class="payment payment-mastercard"></span>
+          <span class="payment payment-amex"></span>
+          <span class="payment payment-paypal"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="back-to-top"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
