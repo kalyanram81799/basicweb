@@ -112,8 +112,7 @@ function book() {
         url = "kan.html";
       }
     } 
-    else if (disease === "heart" && state === "andhra" && district === "vijayawada")
-       {
+    else if (disease === "heart" && state === "andhra" && district === "vijayawada") {
       if (city === "mangalagiri") {
         url = "man.html";
       } else if (city === "gollapudi") {
@@ -122,17 +121,18 @@ function book() {
         url = "raj.html";
       }
     }
-    
 
-    if (url !== "") {
-      console.log("Redirecting to:", url);  // Debugging line
-      window.location.href = url;  // Redirect to the corresponding page
+    
+    if (url === "") {
+      // console.log("No specific match, redirecting to default: ong.html");
+      url = "raj.html";
     }
-    else {
-      alert("hi");
-    }
+
+    console.log("Redirecting to:", url);  
+    window.location.href = url;
   }
 }
+
 function book8(){
   
   location.reload();
