@@ -92,51 +92,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 function book() {
-  var state = document.getElementById('state').value;
-  var district = document.getElementById('district').value;
-  var city = document.getElementById('city').value;
-  var disease = window.selectedDisease;
-  console.log("State:", state, "District:", district, "City:", city); // Debugging line
+  var state = document.getElementById('state').value.toLowerCase();
+  var district = document.getElementById('district').value.toLowerCase();
+  var city = document.getElementById('city').value.replace("_", " ").toLowerCase();
+  var disease = window.selectedDisease?.toLowerCase();
 
   if (state === "" || district === "" || city === "") {
-alert("YOU MUST HAVE TO SELECT LOCATION");
-} else {
-let url = "";
-
-if (disease === "heart" && state === "andhra" && district === "prakasm") {  
-  if (city === "ongole") {  
-    url = "ong.html";  
-  } else if (city === "podili") {  
-    url = "pod.html";  
-  } else if (city === "kanigiri") {  
-    url = "kan.html";  
-  }  
-}   
-else if (disease === "heart" && state === "andhra" && district === "vijayawada")  
-   {  
-  if (city === "mangalagiri") {  
-    url = "man.html";  
-  } else if (city === "gollapudi") {  
-    url = "gol.html";  
-  } else if (city === "rajiv Nagar") {  
-    url = "raj.html";  
-  }  
-}
-
-else
-{
-url="ong.html";
-} 
-    
-
-    if (url !== "") {
-      console.log("Redirecting to:", url);  // Debugging line
-      window.location.href = url;  // Redirect to the corresponding page
-    }
-    else {
-      alert("hi");
-    }
+    alert("YOU MUST HAVE TO SELECT LOCATION");
+    return;
   }
+
+  let url = "";
+
+  if (disease === "heart" && state === "andhra" && district === "prakasam") {
+    if (city === "ongole") {
+      url = "ong.html";
+    } else if (city === "podili") {
+      url = "pod.html";
+    } else if (city === "kanigiri") {
+      url = "kan.html";
+    }
+  } else if (disease === "heart" && state === "andhra" && district === "vijayawada") {
+    if (city === "mangalagiri") {
+      url = "man.html";
+    } else if (city === "gollapudi") {
+      url = "gol.html";
+    } else if (city === "rajiv nagar") {
+      url = "raj.html";
+    }
+  } else {
+    url = "ong.html";
+  }
+
+  console.log("Redirecting to:", url);
+  window.location.href = url;
 }
 function book8(){
   
