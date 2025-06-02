@@ -99,29 +99,37 @@ function book() {
   console.log("State:", state, "District:", district, "City:", city); // Debugging line
 
   if (state === "" || district === "" || city === "") {
-    alert("YOU MUST HAVE TO SELECT LOCATION");
-  } else {
-    let url = "";
+  alert("YOU MUST HAVE TO SELECT LOCATION");
+} else {
+  let url = "";
 
-    if (disease === "heart" && state === "andhra" && district === "prakasm") {
-      if (city === "ongole") {
-        url = "ong.html";
-      } else if (city === "podili") {
-        url = "pod.html";
-      } else if (city === "kanigiri") {
-        url = "kan.html";
-      }
-    } 
-    else if (disease === "heart" && state === "andhra" && district === "vijayawada")
-       {
-      if (city === "mangalagiri") {
-        url = "man.html";
-      } else if (city === "gollapudi") {
-        url = "gol.html";
-      } else if (city === "rajiv Nagar") {
-        url = "raj.html";
-      }
+  const s = state.toLowerCase();
+  const d = district.toLowerCase();
+  const c = city.toLowerCase();
+  const dis = disease.toLowerCase();
+
+  if (dis === "heart" && s === "andhra" && d === "prakasam") {
+    if (c === "ongole") {
+      url = "ong.html";
+    } else if (c === "podili") {
+      url = "pod.html";
+    } else if (c === "kanigiri") {
+      url = "kan.html";
     }
+  } else if (dis === "heart" && s === "andhra" && d === "vijayawada") {
+    if (c === "mangalagiri") {
+      url = "man.html";
+    } else if (c === "gollapudi") {
+      url = "gol.html";
+    } else if (c === "rajiv nagar") {
+      url = "raj.html";
+    }
+  } else {
+    url = "ong.html";
+  }
+
+  window.location.href = ong.html;  
+}
     
 
     if (url !== "") {
