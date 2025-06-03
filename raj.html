@@ -2,13 +2,27 @@
     <head>
         <title></title>
             <style>
+                body {
+                animation: fadeIn 1s ease-in-out;
+            }
+
+           
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
                 .img1{
                     display:flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     gap:20px;
+                    animation: fadeInImages 1.5s ease-in-out;
                 }
+                @keyframes fadeInImages {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
                 .i1{
                     margin-top: 23px;
                     display:flex;
@@ -20,7 +34,15 @@
                     box-shadow: 0 4px 8px rgb(66, 39, 64); 
                     transition: transform 0.3s ease-in-out;
                     cursor: pointer;
+                    opacity: 0;
+                    animation: fadeInImageItem 1s forwards;
+                    
                 }
+                @keyframes fadeInImageItem {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
                 .i1:hover{
                       transform: scale(1.03);
                 }
@@ -104,11 +126,13 @@
           }
           nav >ul >a:hover{
             transform: scale(1.1);
-            background: linear-gradient(to right, brown, rgb(109, 22, 22));
+            background:#fba002;
             size: 1PX;
             border-radius: 15px;
-            color: gold;
+            color: black;
+            font-weight: 900;
           }
+          
 
           h2{
             background-color:#333;
@@ -132,28 +156,30 @@
             margin: 0 10px;
            }
             </style>
+            <script src="bc6.js"></script>
     </head>
     <body>
         <nav>
             <h1>LIFE CONSULT</h1>
-      <ul>
-            <a href="index.html#"><li>HOME</li></a>
-            <a href="menu.html"><li>MENU</li></a>
-            <a href="ab.html"><li>ABOUT</li></a>
-            <a href="cont.html"><li>CONTACT</li></a>
-            <a href="help.html"><li>HELP</li></a>
+        <ul>
+            <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/Website/main.html#"><li>HOME</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\menu.html"><li>MENU</li></a>
+            <a href="file:///C:/Users/Lenovo/OneDrive/Desktop/Website/ab.html"><li>ABOUT</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\cont.html"><li>CONTACT</li></a>
+            <a href="C:\Users\Lenovo\OneDrive\Desktop\Website\help.html"><li>HELP</li></a>
         </ul>
     </nav>
     <br>
+    <br><br><br><br>
          <h2 >CHOOSE  A  HOSPITAL  TO   BOOK   APPOINTEMENT</h2>
 </br>
         <div class="img1">
             <div class="i1">
-                <img src="RIMS.JPEG" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>RIMS MULTISPECALITY HOSPITAL</p>
+                   <p>RIIMS MULTISPECALITY HOSPITAL</p>
                    <div class="bo">
-                    <button onclick="ks()">
+                    <button onclick="ks3()">
                      CONFORM
                     </button>
                    </div>
@@ -161,11 +187,11 @@
             </div>
        
             <div class="i1">
-                <img src="AMRUT.jpg" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>KIMS MULTISPECALITY HOSPITAL</p>
+                   <p>KIIMS MULTISPECALITY HOSPITAL</p>
                    <div class="bo">
-                    <button>
+                    <button onclick="ks4()">
                      CONFORM
                     </button>
                    </div>
@@ -173,11 +199,11 @@
             </div>
           
             <div class="i1">
-                <img src="PRAKASAM.JPEG" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>PRAKASAM HEART HOSPITAL</p>
+                   <p>PRAKASH HEART HOSPITAL</p>
                    <div class="bo">
-                    <button >
+                    <button onclick="ks10()">
                   CONFORM
                     </button>
                    </div>
@@ -185,11 +211,11 @@
             </div>
            
             <div class="i1">
-                <img src="RAINBOW.jpg" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>RAINBOW HEART AND LUNGS HOSPITAL</p>
+                   <p>RAIN HEART AND LUNGS HOSPITAL</p>
                    <div class="bo">
-                    <button>
+                    <button onclick="ks11()">
                  CONFORM
                     </button>
                    </div>
@@ -197,11 +223,11 @@
             </div>
            
             <div class="i1">
-                <img src="SANGA.jpg" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>SANGAMITHRA MULTISPECALITY HOSPITAL</p>
+                   <p>SMITHRA MULTISPECALITY HOSPITAL</p>
                    <div class="bo">
-                    <button>
+                    <button onclick="ks8()">
                  CONFORM
                     </button>
                    </div>
@@ -209,11 +235,11 @@
             </div>
            
             <div class="i1">
-                <img src="VEN.jpg" alt="gdhs">
+                <img src="img.jpeg.png" alt="gdhs">
                 <div class="po">
-                   <p>VENKATARAMANA HEART SPECALITY HOSPITAL</p>
+                   <p>VENKAT  HEART SPECALITY HOSPITAL</p>
                    <div class="bo">
-                    <button>
+                    <button onclick="ks9()">
                  CONFORM
                     </button>
                    </div>
